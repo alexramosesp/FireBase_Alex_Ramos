@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.alexramos.examen_alex_ramos.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_afegirMobleFragment"
+            app:destination="@id/afegirMobleFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_llistarMobleFragment"
+            app:destination="@id/llistarMobleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/afegirMobleFragment"
+        android:name="com.alexramos.examen_alex_ramos.AfegirMobleFragment"
+        android:label="fragment_afegir_moble"
+        tools:layout="@layout/fragment_afegir_moble" >
+        <action
+            android:id="@+id/action_afegirMobleFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/llistarMobleFragment"
+        android:name="com.alexramos.examen_alex_ramos.LlistarMobleFragment"
+        android:label="fragment_llistar_moble"
+        tools:layout="@layout/fragment_llistar_moble" >
+        <action
+            android:id="@+id/action_llistarMobleFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contacteFragment"
+        android:name="com.alexramos.examen_alex_ramos.ContacteFragment"
+        android:label="fragment_contacte"
+        tools:layout="@layout/fragment_contacte" />
+</navigation>
