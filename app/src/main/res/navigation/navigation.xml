@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.alexramos.examen_alex_ramos.HomeFragment"
+        android:name="com.alexramos.examen_alex_ramos.UI.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/afegirMobleFragment"
-        android:name="com.alexramos.examen_alex_ramos.AfegirMobleFragment"
+        android:name="com.alexramos.examen_alex_ramos.UI.AfegirMobleFragment"
         android:label="fragment_afegir_moble"
         tools:layout="@layout/fragment_afegir_moble" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/llistarMobleFragment"
-        android:name="com.alexramos.examen_alex_ramos.LlistarMobleFragment"
+        android:name="com.alexramos.examen_alex_ramos.UI.LlistarMobleFragment"
         android:label="fragment_llistar_moble"
         tools:layout="@layout/fragment_llistar_moble" >
         <action
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/contacteFragment"
-        android:name="com.alexramos.examen_alex_ramos.ContacteFragment"
+        android:name="com.alexramos.examen_alex_ramos.UI.ContacteFragment"
         android:label="fragment_contacte"
         tools:layout="@layout/fragment_contacte" />
 </navigation>
