@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     //PLUGIN PER AL KSP
     id("com.google.devtools.ksp") version "1.9.20-1.0.14"
+    id ("com.google.gms.google-services")
 }
 
 android {
@@ -11,8 +12,8 @@ android {
 
     defaultConfig {
         applicationId = "com.alexramos.examen_alex_ramos"
-        minSdk = 27
-        targetSdk = 34
+        minSdk = 26
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -35,7 +36,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    dataBinding {
+    buildFeatures {
+        viewBinding = true
+    }
+    dataBinding{
         enable = true
     }
 }
@@ -47,6 +51,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     //DEPENDENCIES A MÀ PER A ROOM
     implementation("androidx.room:room-runtime:2.6.1")
     ksp("androidx.room:room-compiler:2.6.1")
@@ -55,8 +61,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.7.5")
-    implementation ("androidx.navigation:navigation-ui-ktx:2.7.5")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
-    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+    implementation("com.google.firebase:firebase-auth:22.3.1")
+    implementation("com.google.firebase:firebase-analytics:21.5.1")
+    implementation("com.google.firebase:firebase-firestore:25.1.2")
 }

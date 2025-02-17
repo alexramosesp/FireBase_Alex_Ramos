@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "837833575859",
+    "project_id": "rutify-50874",
+    "storage_bucket": "rutify-50874.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837833575859:android:5beffba517a07e3383cfc6",
+        "android_client_info": {
+          "package_name": "com.alexramos.examen_alex_ramos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHUJB9Q8dlbCxSmuZHE4Hj7W1SskejUoc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
