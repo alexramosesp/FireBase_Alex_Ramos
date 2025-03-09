@@ -5,6 +5,7 @@
     android:id="@+id/navigation"
     app:startDestination="@id/loginFragment">
 
+    <!-- Fragmento Home -->
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.alexramos.examen_alex_ramos.UI.HomeFragment"
@@ -17,6 +18,8 @@
             android:id="@+id/action_homeFragment_to_llistarMobleFragment"
             app:destination="@id/llistarMobleFragment" />
     </fragment>
+
+    <!-- Fragmento AfegirMoble -->
     <fragment
         android:id="@+id/afegirMobleFragment"
         android:name="com.alexramos.examen_alex_ramos.UI.AfegirMobleFragment"
@@ -26,6 +29,8 @@
             android:id="@+id/action_afegirMobleFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+
+    <!-- Fragmento LlistarMoble -->
     <fragment
         android:id="@+id/llistarMobleFragment"
         android:name="com.alexramos.examen_alex_ramos.UI.LlistarMobleFragment"
@@ -35,19 +40,51 @@
             android:id="@+id/action_llistarMobleFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+
+    <!-- Fragmento Contacte -->
     <fragment
         android:id="@+id/contacteFragment"
         android:name="com.alexramos.examen_alex_ramos.UI.ContacteFragment"
         android:label="fragment_contacte"
         tools:layout="@layout/fragment_contacte" />
+
+    <!-- Fragmento Login -->
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.alexramos.examen_alex_ramos.UI.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login">
+        <!-- Agregar una acción para navegar al listUsersFragment -->
+        <action
+            android:id="@+id/action_loginFragment_to_listUsersFragment"
+            app:destination="@id/listUsersFragment" />
+    </fragment>
+
+    <!-- Fragmento Register -->
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.alexramos.examen_alex_ramos.UI.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
+
+    <!-- Fragmento ListUsers -->
+    <fragment
+        android:id="@+id/listUsersFragment"
+        android:name="com.alexramos.examen_alex_ramos.UI.ListUsersFragment"
+        android:label="List Users" >
+        <action
+            android:id="@+id/action_listUsersFragment_to_updateUserFragment2"
+            app:destination="@id/updateUserFragment" />
+    </fragment>
+
+    <!-- Fragmento UpdateUser -->
+    <fragment
+        android:id="@+id/updateUserFragment"
+        android:name="com.alexramos.examen_alex_ramos.UI.UpdateUserFragment"
+        android:label="Update User">
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+
 </navigation>

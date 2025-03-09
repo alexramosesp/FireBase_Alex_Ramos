@@ -13,7 +13,7 @@ import com.alexramos.examen_alex_ramos.R
 
 class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginBinding
-    private lateinit var firebaseAuth : FirebaseAuth
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,25 +26,25 @@ class LoginFragment : Fragment() {
             val email = binding.emailInput.text.toString()
             val pass = binding.passwordInput.text.toString()
 
-            if (email.isNotEmpty() && pass.isNotEmpty()){
-                firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener{
-                    if (it.isSuccessful){
+            if (email.isNotEmpty() && pass.isNotEmpty()) {
+                firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
+                    if (it.isSuccessful) {
                         Toast.makeText(requireContext(), "Log in successfully!", Toast.LENGTH_SHORT).show()
-                        findNavController().navigate(R.id.homeFragment)
-                    }else {
+                        // Navegar a ListUsersFragment directamente
+                        findNavController().navigate(R.id.action_loginFragment_to_listUsersFragment)
+                    } else {
                         Toast.makeText(requireContext(), it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
                 }
-            } else{
-                Toast.makeText(requireContext(), "Required files are incomplete!", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(requireContext(), "Required fields are incomplete!", Toast.LENGTH_SHORT).show()
             }
         }
+
         binding.registerButton.setOnClickListener {
             findNavController().navigate(R.id.registerFragment)
         }
 
         return binding.root
     }
-
-
 }
